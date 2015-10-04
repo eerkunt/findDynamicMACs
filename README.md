@@ -5,7 +5,7 @@ This script tries to discover Active MACs on given IPs and records them into MyS
 # How to run ?
 
 You need to change few lines inside the script ;
-```
+```perl
 my $svnrepourl  = ""; 			# Your private SVN Repository (should be served via HTTP). Do not forget the last /
 my $SVNUsername = "";			# Your SVN Username
 my $SVNPassword = "";			# Your SVN Password

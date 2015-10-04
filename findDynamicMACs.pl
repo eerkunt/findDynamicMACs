@@ -24,13 +24,10 @@ use Getopt::Std;
 use LWP::UserAgent;
 use HTTP::Headers;
 use LWP::Simple;
-use Statistics::Lite qw(:all);
 use LWP::UserAgent;
-use Data::Dumper;
 use Net::SNMP qw( :snmp DEBUG_ALL ENDOFMIBVIEW );
 use DBI;
 use DBD::mysql;
-use Term::ReadPassword::Win32;
 
 my $version     = "0.0.3";
 my $arguments   = "u:p:i:o:hvt:a:nq";

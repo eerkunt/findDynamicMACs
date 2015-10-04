@@ -65,21 +65,20 @@ my $req = HTTP::Headers->new;
 #
 # Auto-update and Database Configuration Parameters
 #
-my $svnrepourl  = "http://10.34.219.5/repos/scripts/findDynamicMACs/"; # Do not forget the last /
-my $SVNUsername = "coad";
-my $SVNPassword = "hcas71nvc!";
+my $svnrepourl  = ""; 			# Your private SVN Repository (should be served via HTTP). Do not forget the last /
+my $SVNUsername = "";			# Your SVN Username
+my $SVNPassword = "";			# Your SVN Password
 my $SVNScriptName = "findDynamicMACs.pl";
 my $SVNFinalEXEName = "fdm";
-my $DBHost = "10.34.219.5";
-my $DBPort = "3306";
-my $DBName = "cmdb";
-my $DBUser = "cmdb_user";
-my $DBPass = "NX91!JF_Va!";
-my $DBTable = "port_details";
+my $DBHost = "";			# Your MySQL Hostname/IP
+my $DBPort = "3306";			# Your MySQL Port, Default : 3306
+my $DBName = "";			# Your MySQL Database/Schema Name	
+my $DBUser = "";			# Your MySQL Database Username
+my $DBPass = "";			# Your MySQL Database Password
+my $DBTable = "port_details";		# Your MySQL Table Name given Database/Schema
 my $SNMPVersion = "2";
-my $SNMPCommunity = 'bil678&%tel';
-our @ignoreList = ( 1, 4, 996, 1002, 1003, 1004, 1005, 103, 697, 695, 696, 111 );
-# our @ignoreList = ( 1, 4, 996, 1002, 1003, 1004, 1005, 697, 695, 696, 111 );
+my $SNMPCommunity = 'public';		# Your SNMP Community, Default : public
+our @ignoreList = ( 1, 4, 996, 1002, 1003, 1004, 1005, 103, 697, 695, 696, 111 );	# Do not track these VLANs
 
 unless ($opt{n}) {
 	#
